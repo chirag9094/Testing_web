@@ -12,7 +12,7 @@ from azure.ai.vision.imageanalysis.models import VisualFeatures
 from azure.core.credentials import AzureKeyCredential
 from termcolor import colored
 
-os.environ["TOGETHER_API_KEY"] = '10c1c7c6fabe12373eee8e5ef785d62396cb7e35c0500e6eab8097f3c5fd2187' 
+os.environ["TOGETHER_API_KEY"] = 'Enter your API' 
 client = Together()
 
 load_dotenv()
@@ -27,7 +27,7 @@ cv_client = ImageAnalysisClient(
             credential=AzureKeyCredential(ai_key))
 
 getDescriptionPrompt = "Detect the text present in the image and no extra information. Also no markup require. Display the text in simple string format"
-imagePath = r"C:\Users\Chirag C\OneDrive\Desktop\test.jpg"
+imagePath = r"image_path"
 
 def encode_image(image_path):
         with open(image_path, "rb") as image_file:
@@ -197,4 +197,5 @@ for word in raw_text_a.split():
 #     elif normalized_word in only_in_text2:
 #         print(colored(word, 'blue'), end=' ')
 #     else:
+
 #         print(word, end=' ')
